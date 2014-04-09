@@ -1,0 +1,45 @@
+{
+    "Restaurants": [
+        {
+            "SteaknShake": {
+                "Price": 3,
+                "Steak": 5,
+                "Shakes": 10
+            }
+        },
+		{
+            "Sarpinos": {
+                "Price": 4,
+                "Pizza": 10,
+                "Delivery": 8
+            }
+        },
+		{
+            "WingsOver": {
+                "Price": 2,
+                "Chicken": 10,
+                "Drinks": 7
+            }
+        },
+		{
+            "JimmyJohns": {
+                "Price": 5,
+                "Sandwich": 10,
+                "Delivery": 10
+            }
+        },
+		{
+            "TacoBell": {
+                "Price": 6,
+                "Mexican": 7.5
+            }
+        },
+        {
+            "JoyYees": {
+                "Price": 8,
+                "Chinese": 10,
+                "Juice": 7
+            }
+        }
+    ]
+}
