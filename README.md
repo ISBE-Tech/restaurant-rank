@@ -3,9 +3,9 @@ restaurant-rank
 
 Demo display page for ranking restaurants based on user preferences.
 
-** Dependencies
+** Dependencies **
 - JQuery
 - Bootstrap
 
-** Requirements
+** Requirements **
 - Server supporting the PHP Engine
