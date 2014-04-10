@@ -1,11 +1,6 @@
 <?php
 
 $json = json_decode(file_get_contents('restaurants.json'));
-$userrequest = array(
-	'Price'		=> 1,
-	'Steaks'	=> 10,
-	'Shakes'	=> 10
-);
 
 //Possible weight implementation on attributes
 $sortedrestaurants = array();
@@ -13,7 +8,7 @@ $oprestaurant = $opsum = INF;
 for($i = 0; $i < sizeof($json->Restaurants); $i++) {
 	$sum = 0;
 	foreach($json->Restaurants[$i] as $name => $attributes) {
-		foreach($userrequest as $attrib => $value) {
+		foreach($_POST as $attrib => $value) {
 			if(property_exists($attributes, $attrib)) $sum += pow(($attributes->$attrib - $value),2);
 			else $sum += pow($value,2);
 		}
@@ -40,5 +35,6 @@ for($i = 0; $i < sizeof($sortedrestaurants); $i++) {
 }
 
 echo utf8_encode(json_encode($sortedrestaurants));
+http_response_code(200);
 
 ?>

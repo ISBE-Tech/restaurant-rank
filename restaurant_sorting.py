@@ -5,7 +5,7 @@ if __name__ == '__main__':
 	jsonfile = open('restaurants.json')
 	restaurants = json.loads(jsonfile.read())['Restaurants']
 	heaprestaurants = []
-	userrequest = {'Price': 1, 'Steak': 2, 'Shakes': 10, 'Chinese': 10, 'Chicken': 10}
+	userrequest = {'price': 1, 'steak': 2, 'shakes': 10, 'chinese': 10, 'chicken': 10}
 	
 	oprestaurant = opsum = float("inf")
 	for restaurant in restaurants:

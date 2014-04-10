@@ -1,0 +1,61 @@
+html, body {
+	margin: 0px;
+	margin-bottom: 100px;
+	padding: 0px;
+}
+
+.main_container {
+	margin-top: 0px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	min-width: 500px;
+}
+
+.form_container {
+	background: #564848;
+}
+
+.top_header {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.form_input_row {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.form_left {
+	float: left;
+	width: 15%;
+	margin-bottom: 0;
+}
+
+.form_right {
+	float: right;
+	width: 85%;
+}
+
+.eval_btn {
+	float: right;
+	margin: 15px;
+}
+
+#restaurants_list {
+	padding-bottom: 50px;
+}
+
+.restaurant_box {
+	float:left; 
+	min-width: 120px;
+}
+
+.restaurant_group {
+	
+}
