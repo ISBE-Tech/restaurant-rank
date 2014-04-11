@@ -1,11 +1,11 @@
 #python program implementing restaurant sorting algorithm
-import json, heapq
+import json
 
 if __name__ == '__main__':
 	jsonfile = open('restaurants.json')
 	restaurants = json.loads(jsonfile.read())['Restaurants']
-	heaprestaurants = []
-	userrequest = {'price': 1, 'steak': 2, 'shakes': 10, 'chinese': 10, 'chicken': 10}
+	sortedrestaurants = []
+	userrequest = {'price': 10,'steak': 5, 'shakes': 10, 'delivery': 0, 'pizza': 0, 'chicken': 0, 'mexican': 0, 'juice': 0, 'asian': 0}
 	
 	oprestaurant = opsum = float("inf")
 	for restaurant in restaurants:
@@ -17,17 +17,17 @@ if __name__ == '__main__':
 				else:
 					sum += value**2
 		
-		heaprestaurants.append((sum, restaurant))
+		sortedrestaurants.append((sum, restaurant))
 		if sum < opsum: 
 			oprestaurant = restaurant
 			opsum = sum
 	
-	heapq.heapify(heaprestaurants)
-	sortedrestaurants = []
-	for x in xrange(len(heaprestaurants)):
-		sortedrestaurants.append(heapq.heappop(heaprestaurants))
+	def cmp_restaurants(a, b):
+		return -1 if a[0] < b[0] else 1 if a[0] > b[0] else 0
 	
-	#sortedrestaurants = [r for v, r in sortedrestaurants]
+	sortedrestaurants.sort(cmp_restaurants)
+	sortedrestaurants = [k[1] for k in sortedrestaurants]
+	
 	output = open('user_response.json', 'w')
 	output.write(json.dumps(sortedrestaurants))
 	output.close()
