@@ -60,6 +60,7 @@ $(function() {
 						}
 					}
 					str_response += "</div></div>";
+					counter++;
 				}
 				
 				$("#restaurants_list").html(str_response);
